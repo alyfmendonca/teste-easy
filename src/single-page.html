@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Easynvest</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="../img/favicon.ico">
+
+
+    
+
+</head>
+<body>
+    <main class="grid">
+        <section class="cell-4-desktop cell-7-tablet cell-4-phone left-section">
+            <h2>Formulário de cadastro de <br>
+                novos funcionários</h2>
+    
+            <form class="form">
+                <div class="float-input">
+                    <input 
+                        type="text" 
+                        name="name" 
+                        id="name" 
+                        placeholder=" " 
+                        required
+                    >
+                    <label>Nome completo (sem abreviações)</label>
+                    <small class="float-input--error" id="name-error">
+                        
+                    </small>
+                </div>
+    
+                <div class="float-input">
+                    <input 
+                        type="email" 
+                        name="email" 
+                        id="email" 
+                        placeholder=" "
+                        required
+                    >
+                    <label>E-mail</label>
+                    <small class="float-input--error" id="email-error">
+                        
+                    </small>
+                </div>
+    
+                <div class="float-input">
+                    <input 
+                        type="text" 
+                        name="cpf" 
+                        id="cpf" 
+                        placeholder=" "
+                        minlength="14"
+                        maxlength="14"
+                        required
+                    >
+                    <label>Cpf</label>
+                    <small class="float-input--error" id="cpf-error">
+                        
+                    </small>
+                </div>
+    
+                <div class="float-input">
+                    <input 
+                        type="text" 
+                        name="phone" 
+                        id="phone" 
+                        placeholder=" " 
+                        minlength="13"
+                        maxlength="15"
+                        required
+                    >
+                    <label>Telefone</label>
+                    <small class="float-input--error" id="phone-error">
+                        
+                    </small>
+                </div>
+
+                <button id="sendButton" type="submit" disabled >
+                    Cadastrar
+                </button>
+            </form>
+        </section>
+
+
+        <section class="cell-8-desktop cell-7-tablet cell-4-phone left-section list-page">
+            <h2>Funcionários cadastrados    <img class="face hide" src="../img/sad.svg" id="sad-face" alt="Rosto triste" /> <img class="face hide" id="happy-face" src="../img/happy.svg" alt="Rosto feliz" /></h2>
+    
+            <table id="myTable" class="table-responsive">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>CPF</th>
+                        <th>Telefone</th>
+                        <th>Excluir</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody id="myTableBody">
+                    
+                </tbody>
+            </table>
+        </section>
+
+
+    </main>
+    
+</body>
+</html>
+<script type="module"  src="./js/single-page.js"></script>

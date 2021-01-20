@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+.grid {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 24px;
+  margin: 0 auto;
+}
+
+.cell-1-phone {
+  grid-column: span 1;
+}
+.cell-2-phone {
+  grid-column: span 2;
+}
+.cell-3-phone {
+  grid-column: span 3;
+}
+.cell-4-phone {
+  grid-column: span 4;
+}
+
+@media only screen and (min-width: 600px) {
+  .grid {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 24px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  .cell-1-tablet {
+    grid-column: span 1;
+  }
+  .cell-2-tablet {
+    grid-column: span 2;
+  }
+  .cell-3-tablet {
+    grid-column: span 3;
+  }
+  .cell-4-tablet {
+    grid-column: span 4;
+  }
+  .cell-5-tablet {
+    grid-column: span 5;
+  }
+  .cell-6-tablet {
+    grid-column: span 6;
+  }
+  .cell-7-tablet {
+    grid-column: span 7;
+  }
+  .cell-8-tablet {
+    grid-column: span 8;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .grid {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 24px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .cell-1-desktop {
+    grid-column: span 1;
+  }
+  .cell-2-desktop {
+    grid-column: span 2;
+  }
+  .cell-3-desktop {
+    grid-column: span 3;
+  }
+  .cell-4-desktop {
+    grid-column: span 4;
+  }
+  .cell-5-desktop {
+    grid-column: span 5;
+  }
+  .cell-6-desktop {
+    grid-column: span 6;
+  }
+  .cell-7-desktop {
+    grid-column: span 7;
+  }
+  .cell-8-desktop {
+    grid-column: span 8;
+  }
+  .cell-9-desktop {
+    grid-column: span 9;
+  }
+  .cell-10-desktop {
+    grid-column: span 10;
+  }
+  .cell-11-desktop {
+    grid-column: span 11;
+  }
+  .cell-12-desktop {
+    grid-column: span 12;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .grid {
+    margin: auto;
+    max-width: 1640px;
+  }
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: Roboto;
+}
+
+html, body {
+  height: 100%;
+  max-width: 100%;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/people-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+main .left-section {
+  margin-top: 15%;
+}
+main .left-section h2 {
+  color: #4E0250;
+  font-size: 30px;
+  font-weight: 900;
+}
+main .left-section form {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px 0;
+}
+main .left-section form .success-message {
+  width: 80%;
+  margin: 10px auto;
+  color: #00c8b3;
+}
+
+.redirect-button {
+  width: 90%;
+  margin-top: 15px;
+  margin-left: 5%;
+}
+
+.float-input {
+  position: relative;
+  display: inline-grid;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+.float-input label {
+  position: absolute;
+  top: 10px;
+  font-size: 16px;
+  color: #efeeed;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+}
+.float-input input {
+  z-index: 1;
+  background: transparent;
+  outline: none;
+  border: 0;
+  padding: 10px 0;
+  color: #333333;
+  font-size: 16px;
+  border-bottom: 1px solid #333333;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+}
+.float-input input:focus + label {
+  top: -10px;
+  font-size: 12px;
+}
+.float-input input:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 12px;
+}
+.float-input input.invalid {
+  border-color: #eb4a46;
+}
+.float-input span {
+  font-size: 12px;
+  color: #eb4a46;
+  position: absolute;
+  bottom: 0;
+}
+.float-input--error {
+  color: #eb4a46;
+}
+
+button {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #00c8b3;
+  color: #ffffff;
+  cursor: pointer;
+  border: 0;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  width: 80%;
+  margin: auto;
+}
+button:hover {
+  opacity: 0.7;
+}
+button:disabled {
+  color: #dddcdc;
+  background: #f6f6f6;
+}
+
+.hide {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.delete-icon img, .edit-icon img, .delete-icon, .edit-icon, .save-icon img, .save-icon {
+  cursor: pointer;
+  width: 15px;
+  background: transparent;
+}
+
+.button-load {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.button-load div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  animation: button-load 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.button-load div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.button-load div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.button-load div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes button-load {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+table th {
+  text-align: left;
+  font-weight: 300;
+  color: #333333;
+  padding-left: 10px;
+}
+table td {
+  padding: 10px;
+}
+table .center {
+  text-align: center;
+}
+
+main .list-page {
+  background: #ffffff;
+  width: fit-content;
+  height: fit-content;
+  padding: 50px;
+  border-radius: 15px;
+  margin-top: 5%;
+}
+main .list-page h2 {
+  justify-content: space-between;
+  display: flex;
+  align-items: flex-end;
+}
+main .list-page .face {
+  width: 50px;
+}
+
+@media only screen and (max-width: 480px) {
+  main .left-section form {
+    width: 90%;
+    margin: auto;
+  }
+  main .left-section h2 {
+    text-align: center;
+    margin: 15px auto;
+    width: 80%;
+  }
+
+  section.list-page {
+    max-width: 100%;
+    overflow: scroll;
+  }
+}
+/* Small Sizes */
+@media (max-width: 767px) {
+  /* Responsive Table */
+  .table-responsive {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  .table-responsive thead,
+.table-responsive tbody,
+.table-responsive th,
+.table-responsive td,
+.table-responsive tr {
+    display: block;
+  }
+
+  .table-responsive td,
+.table-responsive th {
+    height: 35px;
+  }
+
+  .table-responsive thead {
+    float: left;
+  }
+
+  .table-responsive tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+
+  .table-responsive tbody tr {
+    display: inline-block;
+  }
+
+  .table td:last-child {
+    border-right: #dddcdc solid 1px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

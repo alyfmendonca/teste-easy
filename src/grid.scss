@@ -1,0 +1,117 @@
+@mixin grid($cols){
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat($cols, 1fr);
+    grid-column-gap: 24px;
+    margin: 0 auto;
+
+}
+
+.grid {
+    @include grid(4);
+}
+
+.cell {
+    &-1-phone {
+        grid-column: span 1;
+    }
+    &-2-phone {
+        grid-column: span 2;
+    }
+    &-3-phone {
+        grid-column: span 3;
+    }
+    &-4-phone {
+        grid-column: span 4;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+    .grid {
+        @include grid(8);
+        padding: 0 50px;
+    }
+
+    .cell {
+        &-1-tablet {
+            grid-column: span 1;
+        }
+        &-2-tablet {
+            grid-column: span 2;
+        }
+        &-3-tablet {
+            grid-column: span 3;
+        }
+        &-4-tablet {
+            grid-column: span 4;
+        }
+        &-5-tablet {
+            grid-column: span 5;
+        }
+        &-6-tablet {
+            grid-column: span 6;
+        }
+        &-7-tablet {
+            grid-column: span 7;
+        }
+        &-8-tablet {
+            grid-column: span 8;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    .grid {
+        @include grid(12);
+        padding: 0 20px;
+    }
+
+    .cell {
+        &-1-desktop {
+            grid-column: span 1;
+        }
+        &-2-desktop {
+            grid-column: span 2;
+        }
+        &-3-desktop {
+            grid-column: span 3;
+        }
+        &-4-desktop {
+            grid-column: span 4;
+        }
+        &-5-desktop {
+            grid-column: span 5;
+        }
+        &-6-desktop {
+            grid-column: span 6;
+        }
+        &-7-desktop {
+            grid-column: span 7;
+        }
+        &-8-desktop {
+            grid-column: span 8;
+        }
+        &-9-desktop {
+            grid-column: span 9;
+        }
+        &-10-desktop {
+            grid-column: span 10;
+        }
+        &-11-desktop {
+            grid-column: span 11;
+        }
+        &-12-desktop {
+            grid-column: span 12;
+        }
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .grid{
+        margin: auto;
+        max-width: 1640px;
+    }
+}
