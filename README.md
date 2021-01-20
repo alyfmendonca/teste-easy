@@ -14,6 +14,8 @@ Baixe o repositório usando:
  npm i
  
  npm start
+ 
+ acessar via http://127.0.0.1:8080/src/index.html
 ```
 
 
@@ -43,6 +45,8 @@ git clone https://github.com/alyfmendonca/teste-easy.git
  npm i
  
  npm start
+ 
+ acessar via http://127.0.0.1:8080/src/index.html
 ```
 
 Para alterações nas folhas de estilo basta rodar o comando:
@@ -98,3 +102,11 @@ https://private-21e8de-rafaellucio.apiary-mock.com/users
 
 Para controle dos dados está sendo utilizado o [LocalStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/Window.localStorage). Através dele são feitas as ações de adicionar, remover, alterar e consultar os dados que são exibidos na aplicação. 
 
+
+## Comentários gerais
+
+Seguindo os requisitos foi aplicada a solução criando duas classes (uma para transição de dados e a outra validação dos campos do formulário). Cada página .html possui seu respectivo arquivo .js para controle de exibição de tags em tela e gerenciamento das chamadas para os métodos de cada classe consumida.
+
+Olhando a estrutura do projeto já é possível perceber que possuímos 3 páginas. Na index.html podemos cadastrar os usuários, na list.html podemos verificar os cadastros e na single-page.html podemos fazer todas as ações na mesma página para evitar que o usuário precise transitar entre telas. O http-server foi utilizado para permitir o acesso aos arquivos js como módulos para que pudessem fazer uma melhor comunicação com as classes criadas.
+
+O resto da estrutura do projeto foi desenvolvido tentando alcançar o máximo de simplicidade no desenvolvimento e utilizar os principais conceitos de js e css.
