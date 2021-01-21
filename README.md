@@ -13,6 +13,8 @@ Baixe o repositório usando:
  
  npm i
  
+ npm i -g http-server
+ 
  npm start
  
  acessar via http://127.0.0.1:8080/src/index.html
@@ -43,6 +45,8 @@ git clone https://github.com/alyfmendonca/teste-easy.git
  cd teste-easy
  
  npm i
+ 
+ npm i -g http-server
  
  npm start
  
